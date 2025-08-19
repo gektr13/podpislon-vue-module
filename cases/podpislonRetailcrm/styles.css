@@ -1,0 +1,338 @@
+:root {
+  --main-color: #ffa800;
+  --main-accent: #ffcb00;
+  --lines-color: #e0e3eb;
+  --primary-dark: #71757f;
+  --primary-black: #2b3134;
+  --accent-positive: #29c235;
+  --accent-danger: #f72c32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--primary-black);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.doc-title,
+.title {
+  margin-left: 12px;
+}
+
+/* Общие стили */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--primary-black);
+  line-height: 1.5;
+}
+
+
+
+/* Стили для иконок */
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-dark);
+}
+
+/* Стили для контейнеров */
+.mb40 {
+  margin-bottom: 40px;
+}
+
+/* Стили для модального окна */
+.modal-content {
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  max-width: 375px;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Принудительное горизонтальное расположение кнопок */
+.btns-block {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important;
+}
+
+.btns-block .btn-label {
+  width: 48% !important;
+  flex: 0 0 48% !important;
+  min-width: 0 !important;
+  max-width: 48% !important;
+  display: block !important;
+  cursor: pointer !important;
+}
+
+        .btns-block .shadow-block {
+          width: 100% !important;
+          display: flex !important;
+          align-items: center !important;
+          cursor: pointer !important;
+          transition: all 0.2s ease !important;
+          border: 1px solid transparent !important;
+        }
+
+        .btns-block .shadow-block:hover {
+          border-color: var(--main-color) !important;
+          box-shadow: 0 2px 8px rgba(255, 168, 0, 0.15) !important;
+        }
+
+        .btns-block .shadow-block.checked {
+          border-color: var(--main-color) !important;
+          background-color: rgba(255, 168, 0, 0.05) !important;
+        }
+
+.btns-block .shadow-block.checked .btn-icon,
+.btns-block .shadow-block.checked .btn-text,
+.btns-block .shadow-block:hover .btn-icon,
+.btns-block .shadow-block:hover .btn-text {
+  color: var(--main-color) !important;
+}
+
+.btns-block .shadow-block:hover svg,
+.btns-block .shadow-block.checked svg {
+  fill: var(--main-color) !important;
+}
+
+
+
+/* Стили для инпутов */
+.input-block {
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--lines-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+/* Стили для чекбоксов */
+.checkbox{
+  border: 1px var(--primary-dark) solid;
+  border-radius: 6px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.checkbox.checked{
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+
+.checkbox svg {
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Стили для переключателей */
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.switcher-label {
+  font-size: 14px;
+  color: var(--primary-black);
+}
+
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: var(--lines-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.switch.active {
+  background-color: var(--main-color);
+}
+
+.switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+/* Стили для контейнеров экранов */
+.sign-document-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.doc-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header-section .go-back-btn {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.header-section .shadow-block {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.content-section {
+  margin-bottom: 24px;
+}
+
+.content-section h2 {
+  margin-bottom: 16px;
+}
+
+/* Стили для кнопки Подписать документ */
+.podpislon-button {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.podpislon-button:hover {
+  background-color: var(--main-accent);
+}
+
+/* Стили для секции с кнопкой */
+.button-section {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-section .btn.podpislon-custom-btn {
+  background: #ffa800 !important;
+  background-color: #ffa800 !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 11px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: "Inter", sans-serif !important;
+  text-align: center !important;
+  transition: background-color 0.2s ease !important;
+  height: auto !important;
+  line-height: normal !important;
+  text-decoration: none !important;
+  user-select: none !important;
+  vertical-align: middle !important;
+}
+
+.button-section .btn.podpislon-custom-btn:hover {
+  background: #ffcb00 !important;
+  background-color: #ffcb00 !important;
+  background-image: none !important;
+}
+
+/* Максимально специфичные стили для переопределения retailCRM */
+button.btn.podpislon-custom-btn,
+.button-section button.btn.podpislon-custom-btn,
+section button.btn.podpislon-custom-btn {
+  background: #ffa800 !important;
+  background-color: #ffa800 !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: "Inter", sans-serif !important;
+  text-align: center !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  padding: 11px !important;
+  height: auto !important;
+  line-height: normal !important;
+  text-decoration: none !important;
+  user-select: none !important;
+  vertical-align: middle !important;
+  transition: background-color 0.2s ease !important;
+}
+
+button.btn.podpislon-custom-btn:hover,
+.button-section button.btn.podpislon-custom-btn:hover,
+section button.btn.podpislon-custom-btn:hover {
+  background: #ffcb00 !important;
+  background-color: #ffcb00 !important;
+  background-image: none !important;
+}

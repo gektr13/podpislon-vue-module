@@ -1,0 +1,11 @@
+{ "items": [
+  {
+    "uuid": "b1234567-89ab-cdef-0123-456789abcdef",
+    "name": "podpislonRetailcrm",
+    "targets": [
+      "order/card:customer.after"
+    ],
+    "script": "podpislonRetailcrm.js",
+    "stylesheet": "podpislonRetailcrm.css"
+  }
+]}
